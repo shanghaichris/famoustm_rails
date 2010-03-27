@@ -17,7 +17,7 @@
 						<a href="policy.html" id="menu_item_policy" class="menu_item"><%= t('menu.policy') %></a>
 					</li>
 					<li>
-						<a href="about.html" id="menu_item_about" class="menu_item"><%= t('menu.about') %></a>
+						<%= link_to t('menu.about'),about_path,{:class  =>  "menu_item"} %>
 					</li>
 					<li id="service_call">
 						<!--contact us now-->
