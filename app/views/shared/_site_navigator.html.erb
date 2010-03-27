@@ -1,0 +1,29 @@
+<div id="page_header">
+			<!-- logo -->
+			<div id="site_logo">
+				<a href="/"></a>
+			</div>
+			<!-- main navigator -->
+			<div id="site_navigator">
+				<ul>
+					<li>
+						<a href="/" class="menu_item"><%= t('menu.home') %></a>
+					</li>
+					<li>
+						<%= link_to t('menu.browse'),categories_path,{:class => "menu_item"} %>
+					</li>
+					
+					<li>
+						<a href="policy.html" id="menu_item_policy" class="menu_item"><%= t('menu.policy') %></a>
+					</li>
+					<li>
+						<a href="about.html" id="menu_item_about" class="menu_item"><%= t('menu.about') %></a>
+					</li>
+					<li id="service_call">
+						<!--contact us now-->
+							4008-123-456
+					</li>
+				</ul>
+			</div>
+			
+		</div>

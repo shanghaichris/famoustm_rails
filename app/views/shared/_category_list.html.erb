@@ -1,0 +1,18 @@
+<!-- show all categories-->
+	<div id="all_categories" >
+		
+		<% if @categories.count > 0 %>
+		<ul>
+		  <% for cate in @categories %>
+		    <li>
+		 		 <a href="<%= category_path(cate) %>" class="cat">
+				 	<%= cate.name %>
+						<% if cate.trademarks.count > 0 %>
+						<span class="number"><%= cate.trademarks.count %></span>
+						<% end %>
+				 </a>
+		    </li>
+		  <% end %>
+		</ul>
+	    <% end %>
+	</div>

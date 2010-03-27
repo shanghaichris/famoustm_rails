@@ -1,0 +1,9 @@
+<!--search result-->
+<% title t('search.result')+":#{params[:q]}" %>
+
+<% content_for :submenu do %>
+	<div class="submenu"><%= t('search.result_count',:count => @trademarks.count) %></div>
+<% end %>
+
+
+<%= render :partial => "shared/tm_list",:collection => @trademarks %>

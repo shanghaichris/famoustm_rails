@@ -1,0 +1,36 @@
+<div class="category">
+	<ul>
+		<% if !@categories.blank? %>
+		   
+			<li>
+				<%= link_to t("category.all"),all_categories_path,:remote => true,:class => "cat"  %>
+					<%# if @categories.count > 0 %>
+					<!--<span class="number"><%#= @categories.count %></span>-->
+					<%# end %>
+				</a>
+		    </li>
+			<li>
+				<%= link_to t("category.lastest"), trademarks_last_updated_path,{:class => "cat"},:remote => true %>
+			</li>
+			<li>
+				<% if user_signed_in? && !@category.nil? %>
+					<a class="cat" href="<%= new_category_trademark_path(@category) %>">
+						<%= t 'tm.add' %>
+					</a>
+				<% end %>
+			</li>
+			<li>
+				<% if user_signed_in? %>
+					<%= link_to t('category.add'),new_category_path,:class => 'cat' %>
+				<% end %>
+			</li>
+		<% else %>
+		  
+		<% end %>
+		
+	</ul>
+	
+	
+</div>
+
+

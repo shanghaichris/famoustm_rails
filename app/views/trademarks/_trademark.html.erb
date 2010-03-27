@@ -1,0 +1,35 @@
+<%= error_messages_for :trademark %>
+
+<% form_for [@category,@trademark],:html => { :multipart => true } do |f| -%>
+  	<%= f.label :name, "Trademark Name" %><br/>
+	<%= f.text_field :name %><p/>
+	
+	<%= f.label :category, "Category" %><br/>
+	<% fields_for :category, @category do |c| %>
+	  <%= c.select :id, Category.all.collect {|cat| [ cat.name, cat.id ] } %>
+	<% end -%><p/>
+	
+	<%= f.label :description, "Description" %><br/>
+	<%= f.text_area :description,{:size => "40x10"} %><p/>
+	
+	<%= f.label :reg_number, "Reg Number" %><br/>
+	<%= f.text_field :reg_number %><p/>
+	
+	<%= f.label :reg_date, "Reg Date" %><br/>
+	<%= f.date_select :reg_date %><p/>
+	
+	<%= f.label :reg_item, "Reg Item" %><br/>
+	<%= f.text_field :reg_item %><p/>
+	
+	<%= f.label :reg_company_cn, "Company Name (CHN)" %><br/>
+	<%= f.text_field :reg_company_cn %><p/>
+	
+	<%= f.label :reg_company_en, "Company Name (ENG)" %><br/>
+	<%= f.text_field :reg_company_en %><p/>
+	
+	<%= f.label :avatar, "Trademark Image" %><br/>
+	<%= f.file_field :avatar %><p/>
+	
+	<%= f.submit button_name %>
+	<%= link_to "Cancel", category_path(@category) %>
+<% end -%>

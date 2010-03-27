@@ -1,0 +1,30 @@
+<div class="detail" id="tm_list">
+	<div>
+		
+	<% if @category %>
+	<div id="category_description">
+		<%= @category.memo %>
+	</div>
+	<% end %>
+	
+	<% if !@trademarks.blank? %>
+		<ul sytle="display:block;">
+	  <% for tm in @trademarks %>
+			<li>
+				<%= link_to image_tag(tm.avatar.url(:thumb)), [tm.category,tm] %>
+				<h3><%=link_to tm.name,[tm.category,tm] %></h3>
+			</li>
+			
+	  <% end %>
+		</ul>
+		<div class="pagenav">
+			123	
+		</div>
+	<% else %>
+	  <div class="empty">
+	  	<%= t('category.empty') %>
+	  </div>
+	<% end %>
+	</div>
+	
+</div>

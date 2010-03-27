@@ -1,0 +1,52 @@
+<%= render :partial => "layouts/html_header" %>
+
+<body>
+<!--page outline-->
+	<div id="page_outline">
+		<!--page header: logo, topmenu,main navigator-->
+		<%= render :partial => 'shared/site_navigator' %>
+
+		
+			<!-- customize the page content from here -->
+		
+		<% if flash[:notice] %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end %>
+		
+		<% if flash[:alert] %>
+		<div class="alert">
+			<%= flash[:alert] %>
+		</div>
+		<% end %>
+		
+		<div id="page_content">
+			<!--main content-->
+			<div class="basic_page_header">
+				<span><%= page_title %></span>
+				<div class="header_right">
+					<!--search field-->
+					<% form_tag(search_trademark_path,:method => :get) do %>
+						<%= text_field_tag :q,nil,{:class => "search_box",:type => "search"} %>
+					<% end %>
+				</div>
+				<div style="min-height:36px;padding-top:6px;">
+					<%= yield :submenu %>
+				</div>
+			</div>
+			<div class="basic_page_content">
+				<%= yield %>
+			</div>
+			
+		</div>
+		<!--foot-->
+		<div class="page_foot">
+			<a href="contact.html">联系我们</a> | 
+			<a href="ip_policy.html">法律声明</a> |
+			上海市××律师事务所 主办  ICP备07012690号 | &copy;2010 版权所有 | 在线服务：MSN QQ
+		</div>
+		
+	</div>
+</body>
+</html>

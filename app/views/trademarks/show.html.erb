@@ -1,0 +1,56 @@
+<% title @trademark.category.name %>
+
+<% content_for :submenu do %>
+	<!--category list-->
+	<%= render :partial => 'shared/categories' %>
+
+<% end %>
+
+<div class="detail" id="tm_list">
+	
+	<div class="show_pic">
+	<%= image_tag(@trademark.avatar.url(:medium)) %>
+	</div>
+	
+	<div class="show_title">
+		<h2><%= @trademark.name %></h2>
+	</div>
+
+	<div class="show_description">
+		<%= @trademark.description %>
+	</div>
+
+	<ul style="margin-top:50px;" class="detail_list">
+		<li id="name">
+			<span class="label">
+				Trademark Name: 
+			</span>
+			<%= @trademark.name %>
+		</li>
+		<li id="reg_number" class="odd">
+			<span class="label">Reg Number: </span><%= @trademark.reg_number %>
+		</li>
+		<li id="category">
+			<span class="label">Category: </span><%= link_to @trademark.category.name, category_path(@trademark.category) %>
+		</li>
+		<li id="reg_date"  class="odd">
+			<span class="label">Reg Date: </span><%= @trademark.reg_date %>
+		</li>
+		<li id="reg_item">
+			<span class="label">Reg Item: </span><%= @trademark.reg_item %>
+		</li>
+		<li id="reg_company_cn"  class="odd">
+			<span class="label">Comapny(CHN): </span><%= @trademark.reg_company_cn %>
+		</li>
+		<li id="reg_company_en">
+			<span class="label">Company(ENG): </span><%= @trademark.reg_company_en %>
+		</li>
+		
+	</ul>
+	<div class="pagenav">
+		<%= link_to t("tm.edit"),edit_category_trademark_path(@trademark.category,@trademark) %> | 
+		<%= link_to t("tm.delete"),@trademark,:method => :delete,:confirm => "are your sure?" %>
+		
+	</div>
+</div>
+

@@ -1,0 +1,9 @@
+<% form_for @category do |f| -%>
+  <%= f.label :name, "Category Name" %><br/>
+  <%= f.text_field :name %>
+	<p/>
+  <%= f.label :memo, "Note" %><br/>
+  <%= f.text_area :memo,{:size => "50x8"} %>
+	<p/>
+  <%= f.submit button_name %>
+<% end -%>

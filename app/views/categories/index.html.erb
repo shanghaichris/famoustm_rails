@@ -1,0 +1,12 @@
+<!--browse trademarks by category-->
+	<% title t "category.browse_by_category" %>
+
+
+	<% content_for :submenu do %>
+		<!--category list-->
+		<%= render :partial => 'shared/categories' %>
+
+	<% end %>
+
+<!--trademark list-->
+<%= render :partial => 'shared/tm_list' %>
