@@ -17,11 +17,8 @@ FamoustmRails::Application.routes.draw do |map|
   end
   
   #about us' routes
-  match 'about'  => "about#us" , :as  => :about
-  match 'contact' => "about#contact", :as  => :contact
-  
-  match 'search'  => "search#index", :as  => :search
-  
+  match 'about'  => "home#about" , :as  => :about
+  match 'contact' => "home#contact", :as  => :contact
   
 
   # Sample of regular route:
