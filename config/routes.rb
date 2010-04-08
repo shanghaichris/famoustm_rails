@@ -9,7 +9,7 @@ FamoustmRails::Application.routes.draw do |map|
 
   match 'trademarks/last_updated'  => 'trademarks#last_updated', :as => :trademarks_last_updated
   match '/search'  => 'trademarks#search',:as => :search_trademark
-  resources :trademarks
+  resources :trademarks,:policies
   
   match 'categories/all' => 'categories#all_categories',:as  => :all_categories
   resources :categories do

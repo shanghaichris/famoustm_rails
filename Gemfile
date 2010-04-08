@@ -28,5 +28,5 @@ gem "warden" #, :git => "git://github.com/hassox/warden.git",:version => "0.9.4"
 gem "devise", :git => "git://github.com/plataformatec/devise.git"
 gem "paperclip", :git => "git://github.com/JasonKing/paperclip.git", :branch => 'rails3'
 gem "rmagick", :git => "git://github.com/rmagick/rmagick.git"
-gem "will_paginate", :git => "git://github.com/kaichen/will_paginate.git",:branch => 'rails3_namespace_fix'
+#gem "will_paginate", :git => "git://github.com/shanghaichris/will_paginate.git",:branch => 'rails3'
 gem "inploy" #, :git => "git://github.com/dcrec1/inploy.git"

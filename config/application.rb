@@ -39,5 +39,6 @@ module FamoustmRails
     
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password
+    config.secret_token = "94d1547f4588f3b89eba8ad95ddb132f817e698f5c34bbd1f2ed641f6523a438223eb90655e2237d9dc3a855ddb18d318be436c3189f6567285f4f2b930c1e8c"
   end
 end

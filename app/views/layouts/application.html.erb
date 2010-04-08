@@ -27,7 +27,7 @@
 				<span><%= page_title %></span>
 				<div class="header_right">
 					<!--search field-->
-					<% form_tag(search_trademark_path,:method => :get) do %>
+					<%= form_tag(search_trademark_path,:method => :get) do %>
 						<%= text_field_tag :q,nil,{:class => "search_box",:type => "search"} %>
 					<% end %>
 				</div>
