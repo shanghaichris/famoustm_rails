@@ -5,7 +5,7 @@
 		<ul>
 		  <% for cate in @categories %>
 		    <li>
-		 		 <a href="<%= category_path(cate) %>" class="cat">
+		 		 <a href="<%= category_path(cate) %>" class="cat_list">
 				 	<%= cate.name %>
 						<% if cate.trademarks.count > 0 %>
 						<span class="number"><%= cate.trademarks.count %></span>

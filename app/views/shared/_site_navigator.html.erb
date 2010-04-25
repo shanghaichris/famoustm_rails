@@ -14,15 +14,21 @@
 					</li>
 					
 					<li>
-						<%= link_to t('menu.policy'),policies_path,{:class => "menu_item"} %>
+						<%= link_to t('menu.services'),services_path,{:class => "menu_item"} %>
 					</li>
 					<li>
 						<%= link_to t('menu.about'),about_path,{:class  =>  "menu_item"} %>
 					</li>
+					<li id="site_search" style="margin-left:20px;">
+						<!--searcher-->
+						<input type="text" name="q" id="search_q" size="10"/>
+					</li>
+					<!--
 					<li id="service_call">
-						<!--contact us now-->
+						
 							4008-123-456
 					</li>
+					-->
 				</ul>
 			</div>
 			

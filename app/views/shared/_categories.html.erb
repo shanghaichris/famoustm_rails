@@ -1,5 +1,5 @@
-<div class="category">
-	<ul>
+
+	<ul class="submenu">
 		<% if !@categories.blank? %>
 		   
 			<li>
@@ -7,17 +7,17 @@
 					<%# if @categories.count > 0 %>
 					<!--<span class="number"><%#= @categories.count %></span>-->
 					<%# end %>
-				</a>
+			
 		    </li>
 			<li>
 				<%= link_to t("category.lastest"), trademarks_last_updated_path,{:class => "cat"},:remote => true %>
 			</li>
 			<li>
-				<%# if user_signed_in? && !@category.nil? %>
-					<a class="cat" href="<%= new_category_trademark_path(@category) %>">
-						<%= t 'tm.add' %>
-					</a>
-				<%# end %>
+				<% unless @category.nil? %>
+					
+					<%= link_to t('tm.add'), new_category_trademark_path(@category),:class => "cat" %>
+					
+				<% end %>
 			</li>
 			<li>
 				<%# if user_signed_in? %>
@@ -30,7 +30,3 @@
 		
 	</ul>
 	
-	
-</div>
-
-

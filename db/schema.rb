@@ -9,11 +9,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321133731) do
+ActiveRecord::Schema.define(:version => 20100425091512) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "memo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "service_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "intro"
+    t.string   "services_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

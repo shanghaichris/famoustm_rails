@@ -55,7 +55,7 @@
 	padding: 10px;
 }
 
-.category li, #all_categories li{
+ul.submenu li, #all_categories li{
 	float: left;
 }
 
@@ -66,19 +66,25 @@
 a.cat{
 	display: block;
 	padding: 3px;
-	
+	font-size: 9pt;
 	min-width: 40px;
 	border-radius:8px;
 	-o-border-radius:8px;
 	-moz-border-radius:8px;
 	-webkit-border-radius:8px;
-	color: #7a7979;
-	margin-right: 8px;
+	color: #f1eeee;
+	margin-right: 15px;
 }
 a.cat:hover {
 	text-decoration: none;
 	display: block;
-	color: #434343;
+	color: #eae3ad;
+}
+
+a.cat_list{
+	display: block;
+	padding: 3px;
+	margin-right: 10px;
 }
 
 a.cat_clicked,a.cat_clicked:hover{

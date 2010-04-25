@@ -1,4 +1,10 @@
 FamoustmRails::Application.routes.draw do |map|
+  
+
+  resources :services do
+    resources :posts
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   

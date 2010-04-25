@@ -34,7 +34,7 @@
 	clear: both;
 	height: 376px;
 	
-	border-top-left-radius: 6px;
+	/*border-top-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
 	-moz-border-radius-topleft: 6px;
 	-o-border-top-left-radius:6px;
@@ -42,11 +42,13 @@
 	-webkit-border-top-right-radius: 6px;
 	-moz-border-radius-topright: 6px;
 	-o-border-top-right-radius:6px;
-	
+	*/
+	/*
 	box-shadow:  0px 5px 5px black;
 	-webkit-box-shadow: 0px 5px 5px #999; /* for safari 3.2+ */
-	-moz-box-shadow: 0px 5px 5px #999; /* for firefox 3.5+ */
-	filter: progid:DXImageTransform.Microsoft.Shadow(color="#999",Direction=180, Strength=4);/*for IE shadow*/
+	/*-moz-box-shadow: 0px 5px 5px #999; /* for firefox 3.5+ */
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color="#999",Direction=180, Strength=4);/*for IE shadow*/
+	
 	
 	border: 1px solid #80beea;
 	border-bottom: 0px;

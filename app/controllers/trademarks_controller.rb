@@ -1,5 +1,5 @@
 class TrademarksController < ApplicationController
-  before_filter :authenticate_user! , :except => [:index,:show,:search]
+  #before_filter :authenticate_user! , :except => [:index,:show,:search]
   before_filter :get_category
   before_filter :get_trademark
   def index

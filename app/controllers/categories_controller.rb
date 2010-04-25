@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_filter :authenticate_user! , :except => [:index,:show,:all_categories]
+  #before_filter :authenticate_user! , :except => [:index,:show,:all_categories]
   before_filter :get_category,:only => [:edit,:update,:destroy,:show,:index,:all_categories]
   
   window_title "Category"

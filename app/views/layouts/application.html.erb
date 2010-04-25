@@ -3,6 +3,7 @@
 <body>
 <!--page outline-->
 	<div id="page_outline">
+		<a name="top"></a>
 		<!--page header: logo, topmenu,main navigator-->
 		<%= render :partial => 'shared/site_navigator' %>
 
@@ -26,17 +27,15 @@
 			<div class="basic_page_header">
 				<span><%= page_title %></span>
 				<div class="header_right">
-					<!--search field-->
-					<%= form_tag(search_trademark_path,:method => :get) do %>
-						<%= text_field_tag :q,nil,{:class => "search_box",:type => "search"} %>
-					<% end %>
+					<%= yield :header_right %>
 				</div>
-				<div style="min-height:36px;padding-top:6px;">
+				<div style="min-height:35px;padding-bottom:5px;">
 					<%= yield :submenu %>
 				</div>
 			</div>
 			<div class="basic_page_content">
 				<%= yield %>
+				<div id="clear" style = "clear:both;"></div>
 			</div>
 			
 		</div>

@@ -139,6 +139,10 @@
     lastest: "最新更新"
     edit: "编辑该类别的名称和描述"
     delete: "删除该类别"
+    
+  service:
+      services: "服务"
+      new: "添加新的服务"
   
   policy:
     add: "添加新的法律政策"
@@ -156,6 +160,8 @@
     policy: "法规政策"
     about: "关于我们"
     home: "首页"
+    services: "服务"
+    clients: "客户"
     
   about:
     about_us: "关于我们"
