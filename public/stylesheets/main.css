@@ -91,7 +91,7 @@ input[type="text"],input[type="password"] {
 #site_navigator a:hover{
 	text-decoration: none;
 	color: white;
-	background-color: rgba(32,148,226,0.74);
+	background-color: #56abe5;
 }
 
 #service_call{

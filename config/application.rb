@@ -40,5 +40,8 @@ module FamoustmRails
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password
     config.secret_token = "94d1547f4588f3b89eba8ad95ddb132f817e698f5c34bbd1f2ed641f6523a438223eb90655e2237d9dc3a855ddb18d318be436c3189f6567285f4f2b930c1e8c"
+    config.session_store :cookie_store, :key => '_famoustm_rails_session',
+    :secret => 'c6827607f9e550feea5211465ab6359d82908330226e9d304768a75bbfdb803d3055c470db1df473d2dbecc67cbffda37b0cb221196fe7e959b7811cc4b8bcf7'
+    
   end
 end

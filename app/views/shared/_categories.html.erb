@@ -13,16 +13,16 @@
 				<%= link_to t("category.lastest"), trademarks_last_updated_path,{:class => "cat"},:remote => true %>
 			</li>
 			<li>
-				<% if user_signed_in? && !@category.nil? %>
+				<%# if user_signed_in? && !@category.nil? %>
 					<a class="cat" href="<%= new_category_trademark_path(@category) %>">
 						<%= t 'tm.add' %>
 					</a>
-				<% end %>
+				<%# end %>
 			</li>
 			<li>
-				<% if user_signed_in? %>
+				<%# if user_signed_in? %>
 					<%= link_to t('category.add'),new_category_path,:class => 'cat' %>
-				<% end %>
+				<%# end %>
 			</li>
 		<% else %>
 		  
