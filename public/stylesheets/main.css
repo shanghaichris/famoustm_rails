@@ -53,6 +53,43 @@ input[type="text"],input[type="password"] {
 	font-size: 1.2em;
 }
 
+#call_us_panel{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px solid #98a8bb;
+	padding: 20px;
+}
+#call_us_now{
+	float: right;
+	display: block;
+	text-align: center;
+	max-width:400px;
+	margin-right: 50px	;
+}
+#ask_us_form{
+	display: block;
+	float: left;
+	width: 450px;
+	border-right: 1px dashed #b4b3b4;
+		}
+#our_address{
+	display: block;
+	margin-top: 75px;
+	font-size: 0.5em;
+	color: #d1d1d1;
+	line-height: 1.5em;
+}
+
+a.call_us{
+	display: block;
+	background: url(../images/icon_call.png) no-repeat left center;
+	text-indent: 35px;
+	min-height: 35px;
+	padding-top: 15px;
+	color: #97e3fc;
+}
+
 /* @group sidemenu */
 .page_content{
 	float: right;
@@ -257,6 +294,7 @@ input[type="text"],input[type="password"] {
 		padding-top: 20px;
 	padding-bottom: 0;
 	padding-left: 15px;
+	padding-right: 15px;
 	margin-top: 10px;
 }
 

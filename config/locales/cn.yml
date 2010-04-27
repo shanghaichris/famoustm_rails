@@ -162,6 +162,13 @@
     home: "首页"
     services: "服务"
     clients: "客户"
+    call_us: "立即联系我们"
+    ask_us: "提出您的疑问"
+  
+  contact:
+    name: "您的姓名"
+    email: "电子邮件地址或联系方式"
+    comment: "您的提问"
     
   about:
     about_us: "关于我们"

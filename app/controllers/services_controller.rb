@@ -14,7 +14,7 @@ class ServicesController < ApplicationController
   # GET /services/1.xml
   def show
     @service = Service.find(params[:id])
-
+    @services = Service.all
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @service }

@@ -27,10 +27,42 @@
 			<div class="basic_page_header">
 				<span><%= page_title %></span>
 				<div class="header_right">
-					<%= yield :header_right %>
+					<%#= yield :header_right %>
+					<a href="javascript:;" onClick="Effect.BlindDown('call_us_panel',{duration:0.3});" class="call_us"><%= t('menu.call_us') %></a>
+					
 				</div>
 				<div style="min-height:35px;padding-bottom:5px;">
 					<%= yield :submenu %>
+				</div>
+				
+				<div id="call_us_panel" style="display:none;">
+					<div id="ask_us_form">
+					<!#TODO--please change the following content as a form-->
+						<h1>
+							<%= t('menu.ask_us') %>
+						</h1>
+					
+						<%= t('contact.name') %>: <br/><input type="text" size="12"></input><p/>
+						<%= t('contact.email') %>: <br/><input type="text" size="12"></input><p/>
+						<%= t('contact.comment') %>:<br/><textarea name="comment" rows="8" cols="40"></textarea>
+						<p/>
+						<button name="submit">OK</button>
+					</div>
+					<div id="call_us_now">
+						<h1>
+							或<%= t('menu.call_us') %><p/>
+							4008-123-123
+						<h1>
+						<div id="our_address" >
+							上海：南京东路100号1座14楼A<br/>
+							北京 南门二甲胡同345号C座908室<br/>
+							纽约 5th Ave. C7-0987<br/>
+							安特卫普 Green Ave. 770C<br/>
+						</div>
+					</div>
+					<div style="clear:both;">
+						
+					</div>
 				</div>
 			</div>
 			<div class="basic_page_content">

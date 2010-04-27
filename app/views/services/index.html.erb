@@ -1,20 +1,5 @@
-<% title t('service.services') %>
+<%= render :partial => 'services_header' %>
 
-<% content_for :submenu do %>
-	<ul class="submenu">
-	<% if !@services.blank? %>
-		<% for s in @services %>
-			<li>
-				<%= link_to s.name, service_path(s),:class => "cat" %>
-			</li>
-		<% end %>
-	<% end %>
-	<li>
-		<%= link_to t('service.new'), new_service_path ,:class => "cat"%>
-	</li>
-	
-	</ul>
-<% end %>
 
 
 
